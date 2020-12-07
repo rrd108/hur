@@ -52,7 +52,13 @@ $cakeDescription = 'CakePHP: the rapid development PHP framework';
 <body>
     <main>
         <h1>Magyar infó API</h1>
-        <p>Magyar irányítószámok, városok lekérésére szolgálaó alkalmazás. A lekérdezésekhez HTTP requested kell küldeni.</p>
+        <p>Magyar irányítószámok, városok lekérésére szolgáló API.</p>
+
+        <h2>Használat</h2>
+        <p>A lekérdezésekhez HTTP requested kell küldeni.</p>
+
+        <h2>Javaslatok, hibák</h2>
+        <p>Ha hibát találtál, vagy ötleted van akkor írj a [github repóban](https://github.com/rrd108/hur)</p>
 
         <h2>Szolgáltatások</h2>
         <ul>
