@@ -58,7 +58,7 @@ $cakeDescription = 'CakePHP: the rapid development PHP framework';
         <p>A lekérdezésekhez HTTP requested kell küldeni.</p>
 
         <h2>Javaslatok, hibák</h2>
-        <p>Ha hibát találtál, vagy ötleted van akkor írj a [github repóban](https://github.com/rrd108/hur)</p>
+        <p>Ha hibát találtál, vagy ötleted van akkor írj a <a href="https://github.com/rrd108/hur">github repóba</a></p>
 
         <h2>Szolgáltatások</h2>
         <ul>
