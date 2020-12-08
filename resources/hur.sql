@@ -29,8 +29,8 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `countries` (
   `id` smallint(5) UNSIGNED NOT NULL,
-  `name` varchar(45) COLLATE utf8_hungarian_ci DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_hungarian_ci;
+  `name` varchar(45) COLLATE utf8mb4_hungarian_ci DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_hungarian_ci;
 
 --
 -- A tábla adatainak kiíratása `countries`
@@ -48,11 +48,11 @@ INSERT INTO `countries` (`id`, `name`) VALUES
 CREATE TABLE `zips` (
   `id` mediumint(8) UNSIGNED NOT NULL,
   `country_id` smallint(5) UNSIGNED NOT NULL,
-  `zip` varchar(45) COLLATE utf8_hungarian_ci DEFAULT NULL,
-  `name` varchar(45) COLLATE utf8_hungarian_ci DEFAULT NULL,
+  `zip` varchar(45) COLLATE utf8mb4_hungarian_ci DEFAULT NULL,
+  `name` varchar(45) COLLATE utf8mb4_hungarian_ci DEFAULT NULL,
   `lat` float(10,6) NOT NULL,
   `lng` float(10,6) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_hungarian_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_hungarian_ci;
 
 --
 -- A tábla adatainak kiíratása `zips`
