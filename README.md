@@ -1,6 +1,6 @@
 # Magyar infó API
 
-Magyar irányítószámok, városok lekérésére szolgálaó alkalmazás. A lekérdezésekhez HTTP requested kell küldeni.
+Magyar irányítószámok, városok lekérésére szolgáló alkalmazás. A lekérdezésekhez HTTP requested kell küldeni.
 
 ## Szolgáltatások
 
