@@ -4229,6 +4229,21 @@ ALTER TABLE `countries`
   ADD PRIMARY KEY (`id`);
 
 --
+-- A tábla indexei `familynames`
+--
+ALTER TABLE `familynames`
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `name` (`name`);
+
+--
+-- A tábla indexei `firstnames`
+--
+ALTER TABLE `firstnames`
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `name` (`name`),
+  ADD KEY `sex` (`sex`);
+
+--
 -- A tábla indexei `zips`
 --
 ALTER TABLE `zips`
@@ -4246,6 +4261,18 @@ ALTER TABLE `zips`
 --
 ALTER TABLE `countries`
   MODIFY `id` smallint(5) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- AUTO_INCREMENT a táblához `familynames`
+--
+ALTER TABLE `familynames`
+  MODIFY `id` smallint(5) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=102;
+
+--
+-- AUTO_INCREMENT a táblához `firstnames`
+--
+ALTER TABLE `firstnames`
+  MODIFY `id` mediumint(8) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4343;
 
 --
 -- AUTO_INCREMENT a táblához `zips`
