@@ -1,0 +1,29 @@
+name: CakePHP Deploy
+on:
+    create:
+        tags:
+            - "*"
+jobs:
+    build:
+        name: Deploy
+        runs-on: ubuntu-latest
+        steps:
+            -   name: Checkout Repository
+                uses: actions/checkout@master
+            -   name: Setup Enviroment
+                uses: shivammathur/setup-php@v2
+                with:
+                    php-version: '7.4'
+                    extensions: intl, mbstirng, simplexml, pdo
+            -   name: Install Packages
+                run: composer install --no-dev
+#            -   name: Deploy to Server
+#                uses: kosratdev/laravel-deploy-migrate@laravel
+#                with:
+#                    user: user
+#                    host: host
+#                    port: port
+#                    path: path
+#                    owner: owner
+#                env:
+#                    DEPLOY_KEY: ${{ secrets.DEPLOY_KEY }}
