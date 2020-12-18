@@ -5,7 +5,7 @@ on:
             - "*"
 jobs:
     build:
-        name: Deploy
+        name: CakePHP Deploy
         runs-on: ubuntu-latest
         steps:
             -   name: Checkout Repository
@@ -15,15 +15,17 @@ jobs:
                 with:
                     php-version: '7.4'
                     extensions: intl, mbstring, simplexml, pdo
+            -   name: Speed up the packages installation process
+                run: composer global require hirak/prestissimo
             -   name: Install Packages
                 run: composer install --no-dev
-            -   name: Deploy CakePHP Application
-                uses: wlixcc/SFTP-Deploy-Action@v1.0
+            -   name: Deploy to Server
+                uses: rrd108/cakephp-deploy-migrate@master
                 with:
-                    username: 'webmania_hur'
-                    server: '87.229.65.46'
-                    ssh_private_key: ${{ secrets.SSH_1108_KEY }}
-                    local_path: './*'
-                    # exclude app_local.php
-                    remote_path: '../../web/'
-                    args: '-o ConnectTimeout=5'
+                    user: 'webmania_hur'
+                    host: '87.229.65.46'
+                    port: '22'
+                    path: '../../web/'
+                    owner: 'web121'
+                env:
+                    DEPLOY_KEY: ${{ secrets.SSH_1108_KEY }}
