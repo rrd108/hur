@@ -17,12 +17,13 @@ jobs:
                     extensions: intl, mbstring, simplexml, pdo
             -   name: Install Packages
                 run: composer install --no-dev
-            -   name: deploy file
+            -   name: Deploy CakePHP Application
                 uses: wlixcc/SFTP-Deploy-Action@v1.0
                 with:
                     username: 'webmania_hur'
                     server: '87.229.65.46'
                     ssh_private_key: ${{ secrets.SSH_1108_KEY }}
                     local_path: './*'
+                    # exclude app_local.php
                     remote_path: '../../web/'
                     args: '-o ConnectTimeout=5'
