@@ -17,13 +17,12 @@ jobs:
                     extensions: intl, mbstring, simplexml, pdo
             -   name: Install Packages
                 run: composer install --no-dev
-#            -   name: Deploy to Server
-#                uses: kosratdev/laravel-deploy-migrate@laravel
-#                with:
-#                    user: user
-#                    host: host
-#                    port: port
-#                    path: path
-#                    owner: owner
-#                env:
-#                    DEPLOY_KEY: ${{ secrets.DEPLOY_KEY }}
+            -   name: deploy file
+                uses: wlixcc/SFTP-Deploy-Action@v1.0
+                with:
+                    username: 'webmania_hur'
+                    server: '87.229.65.46'
+                    ssh_private_key: ${{ secrets.SSH_1108_KEY }}
+                    local_path: './*'
+                    remote_path: '../../web/'
+                    args: '-o ConnectTimeout=5'
