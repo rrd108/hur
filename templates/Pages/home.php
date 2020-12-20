@@ -56,7 +56,9 @@ $cakeDescription = 'Magyar API';
         <h2>Szolgáltatások</h2>
         <ul>
             <li>Irányítószámok</li>
-            <li>Nevek (tervezett)</li>
+            <li>Utónevek</li>
+            <li>Családi nevek (tervezett)</li>
+            <li>Címek (tervezett)</li>
         </ul>
 
         <h3>Irányítószámok</h3>
@@ -137,6 +139,44 @@ $cakeDescription = 'Magyar API';
 }
             </pre>
         </p>
+
+        <h3>Utónevek</h3>
+
+        <h4>Utónevek lekérése</h4>
+        <p>
+            A lekérés: <code>GET http://hur.webmania.cc/firstnames/zolt.json</code>
+        </p>
+
+        <p>
+            A válasz:
+            <pre>
+{
+  "firstnames": [
+    {
+      "id": 4320,
+      "sex": "M",
+      "name": "Zolta"
+    },
+    {
+      "id": 4321,
+      "sex": "M",
+      "name": "Zoltán"
+    },
+    {
+      "id": 2455,
+      "sex": "F",
+      "name": "Zoltána"
+    }
+  ]
+}</pre>
+        </p>
+        <h5>Szűrés</h5>
+        <p>Az eredmény szűrhető nemek szerint.</p>
+        <ul>
+          <li>Férfi nevek<code>http://hur.webmania.cc/firstnames/zolt.json?sex=m</code></li>
+          <li>Női nevek<code>http://hur.webmania.cc/firstnames/zolt.json?sex=f</code></li>
+        </ul>
+
     </main>
 </body>
 </html>

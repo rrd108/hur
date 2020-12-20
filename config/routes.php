@@ -73,6 +73,7 @@ $routes->scope('/', function (RouteBuilder $builder) {
 
     $builder->setExtensions(['json']);
     $builder->resources('Zips', ['id' => '.*']);
+    $builder->resources('Firstnames', ['id' => '.*']);
 
     $builder->fallbacks();
 });

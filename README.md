@@ -5,7 +5,10 @@ Magyar irányítószámok, városok lekérésére szolgáló alkalmazás. A lek�
 ## Szolgáltatások
 
 1. Irányítószámok
-2. Nevek (tervezett)
+2. Utónevek
+3. Családi nevek (tervezett)
+4. Címek (tervezett)
+
 
 ### Irányítószámok
 
@@ -57,7 +60,7 @@ A lekérés:
 A válasz:
 
 ````json
-  {
+{
   "zips": [
     {
       "id": 2337,
@@ -86,3 +89,42 @@ A válasz:
   ]
 }
 ````
+
+### Utónevek
+
+#### Utónevek lekérése
+
+A lekérés:
+
+    GET http://hur.webmania.cc/firstnames/zolt.json
+
+A válasz:
+
+````json
+{
+  "firstnames": [
+    {
+      "id": 4320,
+      "sex": "M",
+      "name": "Zolta"
+    },
+    {
+      "id": 4321,
+      "sex": "M",
+      "name": "Zoltán"
+    },
+    {
+      "id": 2455,
+      "sex": "F",
+      "name": "Zoltána"
+    }
+  ]
+}
+````
+
+##### Szűrés
+
+Az eredmény szűrhető nemek szerint.
+
+* Férfi nevek `http://hur.webmania.cc/firstnames/zolt.json?sex=m`</li>
+* Női nevek `http://hur.webmania.cc/firstnames/zolt.json?sex=f`</li>
