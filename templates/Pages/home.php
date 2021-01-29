@@ -54,18 +54,19 @@ $cakeDescription = 'Magyar API';
         <p>Ha hibát találtál, vagy ötleted van akkor írj a <a href="https://github.com/rrd108/hur">github repóba</a></p>
 
         <h2>Szolgáltatások</h2>
-        <ul>
+        <ol>
             <li>Irányítószámok</li>
             <li>Utónevek</li>
             <li>Családi nevek (tervezett)</li>
             <li>Címek (tervezett)</li>
-        </ul>
+            <li>Termékek</li>
+        </ol>
 
         <h3>Irányítószámok</h3>
 
         <h4>Település név alapján irányítószám lekérése</h4>
         <p>
-            A lekérés: <code>GET http://hur.webmania.cc/zips/Békés.json</code>
+            A lekérés: <code>GET https://hur.webmania.cc/zips/Békés.json</code>
         </p>
 
         <p>
@@ -104,7 +105,7 @@ $cakeDescription = 'Magyar API';
 
         <h4>Irányítószám alapján települések lekérése</h4>
         <p>
-            A lekérés: <code>GET http://hur.webmania.cc/zips/7300.json</code>
+            A lekérés: <code>GET https://hur.webmania.cc/zips/7300.json</code>
         </p>
         <p>
             A válasz:
@@ -144,7 +145,7 @@ $cakeDescription = 'Magyar API';
 
         <h4>Utónevek lekérése</h4>
         <p>
-            A lekérés: <code>GET http://hur.webmania.cc/firstnames/zolt.json</code>
+            A lekérés: <code>GET https://hur.webmania.cc/firstnames/zolt.json</code>
         </p>
 
         <p>
@@ -173,9 +174,41 @@ $cakeDescription = 'Magyar API';
         <h5>Szűrés</h5>
         <p>Az eredmény szűrhető nemek szerint.</p>
         <ul>
-          <li>Férfi nevek<code>http://hur.webmania.cc/firstnames/zolt.json?sex=m</code></li>
-          <li>Női nevek<code>http://hur.webmania.cc/firstnames/zolt.json?sex=f</code></li>
+          <li>Férfi nevek<code>https://hur.webmania.cc/firstnames/zolt.json?sex=m</code></li>
+          <li>Női nevek<code>https://hur.webmania.cc/firstnames/zolt.json?sex=f</code></li>
         </ul>
+
+
+        <h3>Termékek</h3>
+
+        <p>A lekérés: <code>GET https://hur.webmania.cc/products.json</code></p>
+
+        <p>
+          A válasz:
+          <pre>
+{
+  "products":[
+    {
+      "id":1,
+      "category":"Bogyós",
+      "name":"Málna",
+      "description":"Kézzel termelt egészség",
+      "picture":"https://hur.webmania.cc/img/malna.jpg",
+      "price":3800,
+      "stock":500
+    },
+    {
+      "id":2,
+      "category":"Bogyós",
+      "name":"Áfonya",
+      "description":"Az erdő kincse az otthonodba",
+      "picture":"https://hur.webmania.cc/img/afonya.jpg",
+      "price":3250,
+      "stock":120
+    }
+  ]
+}</pre>
+        </p>
 
     </main>
 </body>

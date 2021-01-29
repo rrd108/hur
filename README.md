@@ -8,15 +8,16 @@ Magyar irányítószámok, városok lekérésére szolgáló alkalmazás. A lek�
 2. Utónevek
 3. Családi nevek (tervezett)
 4. Címek (tervezett)
+5. Termékek
 
 
-### Irányítószámok
+### 1. Irányítószámok
 
 #### Település név alapján irányítószám lekérése
 
 A lekérés:
 
-    GET http://hur.webmania.cc/zips/Békés.json
+    GET https://hur.webmania.cc/zips/Békés.json
 
 A válasz:
 
@@ -55,7 +56,7 @@ A válasz:
 
 A lekérés:
 
-    GET http://hur.webmania.cc/zips/7300.json
+    GET https://hur.webmania.cc/zips/7300.json
 
 A válasz:
 
@@ -90,13 +91,13 @@ A válasz:
 }
 ````
 
-### Utónevek
+### 2. Utónevek
 
 #### Utónevek lekérése
 
 A lekérés:
 
-    GET http://hur.webmania.cc/firstnames/zolt.json
+    GET https://hur.webmania.cc/firstnames/zolt.json
 
 A válasz:
 
@@ -126,5 +127,38 @@ A válasz:
 
 Az eredmény szűrhető nemek szerint.
 
-* Férfi nevek `http://hur.webmania.cc/firstnames/zolt.json?sex=m`</li>
-* Női nevek `http://hur.webmania.cc/firstnames/zolt.json?sex=f`</li>
+* Férfi nevek `https://hur.webmania.cc/firstnames/zolt.json?sex=m`</li>
+* Női nevek `https://hur.webmania.cc/firstnames/zolt.json?sex=f`</li>
+
+### 5. Termékek
+
+A lekérés:
+
+    GET https://hur.webmania.cc/products.json
+
+A válasz:
+
+````json
+{
+  "products":[
+    {
+      "id":1,
+      "category":"Bogyós",
+      "name":"Málna",
+      "description":"Kézzel termelt egészség",
+      "picture":"https://hur.webmania.cc/img/malna.jpg",
+      "price":3800,
+      "stock":500
+    },
+    {
+      "id":2,
+      "category":"Bogyós",
+      "name":"Áfonya",
+      "description":"Az erdő kincse az otthonodba",
+      "picture":"https://hur.webmania.cc/img/afonya.jpg",
+      "price":3250,
+      "stock":120
+    }
+  ]
+}
+````
