@@ -1,4 +1,5 @@
 <?php
+
 declare(strict_types=1);
 
 namespace App\Controller;
@@ -41,12 +42,7 @@ class ZipsController extends AppController
         if (is_numeric($term)) {
             $zips->where(['Zips.zip' => $term]);
         } else {
-            // as Budapest is in the database by districts we have a special case here
-            if(stripos($term, 'budapest') === 0) {
-                $zips->where(['Zips.name LIKE' => $term . '%']);
-            } else {
-                $zips->where(['Zips.name' => $term]);
-            }
+            $zips->where(['Zips.name LIKE' => $term . '%']);
         }
 
         $this->set(compact('zips'));
