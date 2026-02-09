@@ -1594,7 +1594,7 @@ INSERT INTO `firstnames` (`id`, `sex`, `name`) VALUES
 (1526, 'F', 'Malka'),
 (1527, 'F', 'Málna'),
 (1528, 'F', 'Malvin'),
-(1529, 'F', 'Malvina'),
+(, 'F', 'Malvina'),
 (1530, 'F', 'Mályva'),
 (1531, 'F', 'Maminti'),
 (1532, 'F', 'Mana'),
@@ -8554,7 +8554,8 @@ INSERT INTO `zips` (`id`, `country_id`, `zip`, `name`, `lat`, `lng`) VALUES
 (4151, 1, '9494', 'Sopron', 47.641636, 16.678452),
 (4152, 1, '9541', 'Celldömölk', 47.215942, 17.159224),
 (4153, 1, '9740', 'Bük', 47.380585, 16.787655),
-(4154, 1, '9955', 'Szentgotthárd', 46.983177, 16.291002);
+(4154, 1, '9955', 'Szentgotthárd', 46.983177, 16.291002),
+(4155, 1, '1529', 'Budapest XII. kerület', 47.520515, 18.944872);
 
 --
 -- Indexek a kiírt táblákhoz
