@@ -6,9 +6,7 @@ Magyar irányítószámok, városok lekérésére szolgáló alkalmazás. A lek�
 
 1. Irányítószámok
 2. Utónevek
-3. Családi nevek (tervezett)
-4. Címek (tervezett)
-5. Termékek
+3. Termékek
 
 
 ### 1. Irányítószámok
@@ -130,7 +128,7 @@ Az eredmény szűrhető nemek szerint.
 * Férfi nevek `https://hur.webmania.cc/firstnames/zolt.json?sex=m`</li>
 * Női nevek `https://hur.webmania.cc/firstnames/zolt.json?sex=f`</li>
 
-### 5. Termékek
+### 3. Termékek
 
 A lekérés:
 
